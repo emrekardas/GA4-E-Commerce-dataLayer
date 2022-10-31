@@ -31,6 +31,7 @@ window.dataLayer.push({
         'transaction_id': '{orderId}',
         'currency': 'TRY',
         'value': '{total}',
+        'google_business_vertical': "retail", // Google Ads parametresi, değişmez.
         'items': products
     }   
 });
