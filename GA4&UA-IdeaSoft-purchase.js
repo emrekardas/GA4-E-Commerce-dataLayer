@@ -34,6 +34,7 @@ window.dataLayer.push({
         'value': '{total}',
         'tax': '{tax}',
         'shipping': '{cargo}',
+        'google_business_vertical': "retail", // Google Ads parametresi, değişmez.
         'items': products
   }
 });
