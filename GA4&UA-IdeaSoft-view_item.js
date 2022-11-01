@@ -6,6 +6,7 @@ window.dataLayer.push({
         'value': '{productPrice}',
         'item_id': '{productId}',
         'item_name': '{productName}',
+        'google_business_vertical': "retail" // Google Ads parametresi, değişmez.
     }
     
 });
