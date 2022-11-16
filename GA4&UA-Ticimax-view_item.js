@@ -3,6 +3,7 @@
 
 //<script>
 function totalPrice() { // totalPrice fonksiyonun sebebi Ticimax ürün detay sayfasında value değerini "," ile belirtmiş bunu "." 'ya çevirmek için.
+  var brand = document.querySelector(`.right_line.Marka`).innerText
   var price = "{FIYATKDVDAHIL}"  
   var commaReplacePrice = price.replaceAll(',', '.')
   var token = '.'
@@ -27,6 +28,7 @@ window.dataLayer.push({
           'price': totalPrice(),  // Ürün fiyatı
           'item_category': "{KATEGORIADI}", // Ürün kategorisi
           'quantity': 1,
+          'brand' : brand,
           'id': "{ID}", // item_id değeri eklenecek.
       }]}
 });
