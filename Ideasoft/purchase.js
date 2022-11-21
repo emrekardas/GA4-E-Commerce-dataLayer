@@ -17,25 +17,25 @@ var products = [];
 
 for (var i = 0; i < FBurunler.length; i++) {
     products.push({
-        'item_name': Names[i],
-        'item_id': Ids[i],
-        'price': Prices[i],
-        'quantity': Quantity[i]
+        item_name: Names[i],
+        item_id: Ids[i],
+        price: Prices[i],
+        quantity: Quantity[i]
       });
 
 }
 
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
-  'event': 'purchase',
-  'ecommerce' : {
-        'transaction_id': '{orderId}',
-        'currency': 'TRY',
-        'value': '{total}',
-        'tax': '{tax}',
-        'shipping': '{cargo}',
-        'google_business_vertical': "retail", // Google Ads parametresi, değişmez.
-        'items': products
+  event: purchase,
+  ecommerce : {
+        transaction_id: {orderId},
+        currency: TRY,
+        value: {total},
+        tax: {tax},
+        shipping: {cargo},
+        google_business_vertical: "retail", // Google Ads parametresi, değişmez.
+        items: products
   }
 });
 //</script>

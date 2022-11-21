@@ -1,25 +1,25 @@
 //<script type="text/javascript">
 {% if template contains 'collection' %}
 var ecommerce = {
-                'items': [
+                items: [
                     {% for product in collection.products %}{
-                        'item_id'         : '{{product.id | json}}',                  
-                        'item_variant'    : {{product.selected_variant.title | json}},             
-                        'item_name'       : {{product.title | json}},
-                        'price'           : {{product.price | money_without_currency | replace: ',', '.' | json}},
-                        'item_brand'      : {{product.vendor | json}},
-                        'item_category'   : {{product.type | json}},
-                        'item_list_name'  : {{collection.title | json}},
-                        'imageURL'        : "https:{{product.featured_image.src|img_url:'grande'}}", 
-                        'productURL'      : '{{shop.secure_url}}{{product.url}}',
-                        'sku'             : {{product.selected_variant.sku | json}},
+                        item_id         : '{{product.id | json}}',                  
+                        item_variant    : {{product.selected_variant.title | json}},             
+                        item_name       : {{product.title | json}},
+                        price           : {{product.price | money_without_currency | replace: ',', '.' | json}},
+                        item_brand      : {{product.vendor | json}},
+                        item_category   : {{product.type | json}},
+                        item_list_name  : {{collection.title | json}},
+                        imageURL        : "https:{{product.featured_image.src|img_url:'grande'}}", 
+                        productURL      : '{{shop.secure_url}}{{product.url}}',
+                        sku             : {{product.selected_variant.sku | json}},
                     },
                     {% endfor %}]
                 };  
             dataLayer.push({
-                'productList' : {{collection.title | json}},
-                'pageType'    : 'Collection',
-                'event'       : 'view_item_list',
+                productList : {{collection.title | json}},
+                pageType    : 'Collection',
+                event       : 'view_item_list',
                 ecommerce
             });
 {% endif %}

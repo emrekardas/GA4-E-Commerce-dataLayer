@@ -12,21 +12,21 @@ var products = [];
 
 for (var i = 0; i < Ids.length; i++) {
     products.push({
-        'item_id': Ids[i],
-        'item_name': Names[i],
-        'price': Prices[i],
-        'item_category' : Category[i],
-        'quantity': Quantity[i]
+        item_id: Ids[i],
+        item_name: Names[i],
+        price: Prices[i],
+        item_category : Category[i],
+        quantity: Quantity[i]
       });
 }
 window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
-      'event': "view_cart",
-      'ecommerce': {
-        'currency': "TRY",
-        'value': "{TOPLAMTUTARKDVDAHIL}" , // Toplam tutar  
-        'items': products,
-        'google_business_vertical': "retail" // Google Ads parametresi, değişmez.
+      event: "view_cart",
+      ecommerce: {
+        currency: "TRY",
+        value: "{TOPLAMTUTARKDVDAHIL}" , // Toplam tutar  
+        items: products,
+        google_business_vertical: "retail" // Google Ads parametresi, değişmez.
       } 
 });
 //</script>

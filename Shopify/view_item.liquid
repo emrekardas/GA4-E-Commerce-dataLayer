@@ -1,18 +1,24 @@
-//<script>
+<script type="text/javascript">
 {% if template contains 'product' %}  
             var ecommerce = {
-                'items': [{
-                    'item_id'        : '{{product.id | json}}',  
-                    'item_variant'    : {{product.selected_variant.title | json}},             
-                    'item_name'      : {{product.title | json}},
-                    'price'           : {{product.price | money_without_currency | replace: ',', '.' | json}},
-                    'item_brand'      : {{product.vendor | json}},
-                    'item_category'   : {{product.type | json}},
-                    'item_list_name'  : {{collection.title | json}},
-                    'description'     : {{product.description | strip_newlines | strip_html | json}},
-                    'imageURL'        : 'https:{{product.featured_image.src|img_url:'grande'}}', 
-                    'productURL'      : '{{product.url}}'
+                items: [{
+                    item_id        : '{{product.id | json}}',  
+                    item_variant    : {{product.selected_variant.title | json}},             
+                    item_name      : {{product.title | json}},
+                    price           : {{product.price | money_without_currency | replace: ',', '.' | json}},
+                    item_brand      : {{product.vendor | json}},
+                    item_category   : {{product.type | json}},
+                    item_list_name  : {{collection.title | json}},
+                    description     : {{product.description | strip_newlines | strip_html | json}},
+                    imageURL        : 'https:{{product.featured_image.src|img_url:'grande'}}', 
+                    productURL      : '{{product.url}}'
                 }]
-            };                             
-{% endif %}
-//</script>
+            };               
+            dataLayer.push({
+                pageType : 'Product',
+                event    : 'view_item_yeni',
+            	 ecommerce
+            	});
+                          
+  		{% endif %}
+</script>

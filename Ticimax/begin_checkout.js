@@ -20,12 +20,12 @@ for (var i = 0; i < Ids.length; i++) {
 
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
-    'event': "begin_checkout",
-    'ecommerce': {
-      'items': products,
-      'currency': "TRY",
-      'value':"{TOPLAMTUTARKDVDAHIL}",// Toplam tutar  .
-      'google_business_vertical': "retail" // Google Ads parametresi, değişmez.
+    event: "begin_checkout",
+    ecommerce: {
+      items : products,
+      currency: "TRY",
+      value:"{TOPLAMTUTARKDVDAHIL}",// Toplam tutar  .
+      google_business_vertical: "retail" // Google Ads parametresi, değişmez.
     }
 });
 //</script>
