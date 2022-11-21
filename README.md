@@ -1,16 +1,14 @@
-# Google Analytics 4 Örnek Data
-<p>Aşağıda verilen yapılar dataLayerın kurulumundan sonra bize yansıtılacak dataların örneğidir. Değişkenler örnekte verilen isimlerle kullanılmalıdır.</p>
+# Google Analytics 4 Sample Data
+<p>The dataLayer given below are an example of the data that will be reflected to us after the installation of the dataLayer. Variables should be used with the names given in the example.</p>
 
-## Konu Başlıkları
-	1.0 | Gelişmiş E-Ticaret Takibi Entegrasyonu
-	2.0 | User-ID Entegrasyonu
-	3.0 | Gelişmiş Form Takibi Entegrasyonu
+## Subjects
+	1.0 | Advanced E-Commerce Tracking Integration
 
-## 1.0 | Gelişmiş E-Ticaret Takibi Entegrasyonu
+## 1.0 | Advanced E-Commerce Tracking Integration
 
 ## 1.0.1 - view_item_list
 
-<p>Kullanıcıya belirli bir kategorideki öğelerin listesi sunulduğunda çalışmalıdır.</p>
+<p>It should work when the user is presented with a list of items of a certain category.</p>
 
 ```
 dataLayer.push({ ecommerce: null }); // Clear the previous ecommerce object.  
@@ -67,7 +65,7 @@ dataLayer.push({
 
 ## 1.0.2 - select_item
 
-<p>Kullanıcı, site içerisinde bir ürün tıklaması gerçekleştirdiğinde çalışmalıdır.</p>
+<p>It should work when the user performs a product click within the site.</p>
 
 ```
 dataLayer.push({ ecommerce: null }); // Clear the previous ecommerce object.  
@@ -102,7 +100,7 @@ dataLayer.push({
 
 ## 1.0.3 - view_item
 
-<p>Kullanıcı, bir ürünü görüntülediğinde çalışmalıdır.</p>
+<p>It should work when the user views a product.</p>
 
 ```
 dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
@@ -140,7 +138,7 @@ dataLayer.push({
 
 ## 1.0.4 - add_to_cart
 
-<p>Kullanıcı, bir ürünü sepete eklediğinde çalışmalıdır.</p>
+<p>It should work when the user adds a product to the cart.</p>
 
 ```
 dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
@@ -178,7 +176,7 @@ dataLayer.push({
 
 ## 1.0.5 - add_to_wishlist
 
-<p>Kullanıcı, bir ürünü favorilere eklediğinde çalışmalıdır.</p>
+<p>It should work when the user adds a product to favorites.</p>
 
 ```
 dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
@@ -218,7 +216,7 @@ dataLayer.push({
 
 ## 1.0.6 - view_cart
 
-<p>Kullanıcı, sepeti görüntülediğinde çalışmalıdır.</p>
+<p>It should work when the user views the cart.</p>
 
 ```
 dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
@@ -258,7 +256,7 @@ dataLayer.push({
 
 ## 1.0.7 - remove_from_cart
 
-<p>Kullanıcı, sepetten ürün kaldırdığında çalışmalıdır.</p>
+<p>It should work when the user removes the product from the cart.</p>
 
 ```
 dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
@@ -296,7 +294,7 @@ dataLayer.push({
 
 ## 1.0.8 - begin_checkout
 
-<p>Kullanıcı, ödeme adımlarını başlattığında çalışmalıdır.</p>
+<p>It should work when the user starts paying steps.</p>
 
 ```
 dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
@@ -334,7 +332,7 @@ dataLayer.push({
 
 ## 1.0.9 - add_shipping_info
 
-<p>Kullanıcı, teslimat bilgilerini tamamladığında çalışmalıdır.</p>
+<p>It should work when the user completes the delivery information.</p>
 
 ```
 dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
@@ -376,7 +374,7 @@ dataLayer.push({
 
 ## 1.0.10 - add_payment_info
 
-<p>Kullanıcı, ödeme bilgilerini tamamladığında çalışmalıdır.</p>
+<p>The user should be working when he completes the pay information.</p>
 
 ```
 dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
@@ -418,7 +416,7 @@ dataLayer.push({
 
 ## 1.0.11 - purchase
 
-<p>Kullanıcı, satın alma işlemini tamamladığında çalışmalıdır.</p>
+<p>It should work when the user completes the purchase.</p>
 
 ```
 dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
@@ -483,9 +481,9 @@ dataLayer.push({
 
 <br>
 
-## 1.0.12 refund - (Kısmi Geri Ödeme)
+## 1.0.12 refund - (Partial Payback)
 
-<p>Kullanıcı, siparişindeki bir veya daha fazla ürün için iade işlemi gerçekleştirdiğinde çalışmalıdır.</p>
+<p>It should work when the user performs a refund operation for one or more products in his order.</p>
 
 ```
 dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
@@ -528,9 +526,9 @@ dataLayer.push({
 
 <br>
 
-## 1.0.13 refund - (Tam Geri Ödeme)
+## 1.0.13 refund - (Payback)
 
-<p>Kullanıcı, siparişi için iade işlemi gerçekleştirdiğinde çalışmalıdır.</p>
+<p>It should work when the user performs a refund operation for his order.</p>
 
 ```
 dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
@@ -552,7 +550,7 @@ dataLayer.push({
 
 ## 1.0.14 - view_promotion
 
-<p>Kullanıcı, web sitesindeki bir promosyonu görüntülediğinde çalışmalıdır.</p>
+<p>It should work when the user views a promotion on the website.</p>
 
 ```
 dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
@@ -590,7 +588,7 @@ dataLayer.push({
 
 ## 1.0.15 - select_promotion
 
-<p>Kullanıcı, web sitesindeki bir promosyona tıklama gerçekleştirdiğinde çalışmalıdır.</p>
+<p>It should work when the user performs a click on a promotion on the website.</p>
 
 ```
 dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
@@ -622,109 +620,6 @@ dataLayer.push({
     ]
   }
 });
-```
-
-<br>
-
-## 2.0 | User-ID Entegrasyonu
-
-## 2.0.1 - login
-
-<p>Kullanıcı, web sitesinde oturum açtığında çalışmalıdır.</p>
-
-```
-window.dataLayer = window.dataLayer || []; 
-window.dataLayer.push({ 
-'event' : 'login',
-'userId' : {{dinamik değer}} //gönderilen değer, CRM panelindeki ‘üye id’ ile eşdeğer olmalıdır. 
-})
-
-```
-
-<br>
-
-## 2.0.2 - signup
-
-<p>Kullanıcı, web sitesinde kayıt işlemi gerçekleştirdiğinde çalışmalıdır.</p>
-
-```
-window.dataLayer = window.dataLayer || []; 
-window.dataLayer.push({ 
-'event' : 'signup',
-'userId' : {{dinamik değer}} //gönderilen değer, CRM panelindeki ‘üye id’ ile eşdeğer olmalıdır. 
-})
-
-```
-
-<br>
-
-
-## 2.0.3 - user_data
-
-<p>Kullanıcının web sitesinde üye girişi sağladıktan sonra bulunduğu bütün sayfalarda çalışması gerekmektedir.</p>
-
-```
-window.dataLayer = window.dataLayer || []; 
-window.dataLayer.push({ 
-'event' : 'user_data',
-'userId' : {{dinamik değer}} //gönderilen değer, CRM panelindeki ‘üye id’ ile eşdeğer olmalıdır. 
-})
-
-```
-
-<br>
-
-## 3.0 | Gelişmiş Form Takibi Entegrasyonu
-
-## 3.0.1 - form_submission
-
-<p>Kullanıcı, web sitesinde bulunan formları tamamladığında çalışmalıdır.</p>
-
-```
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-    event: "form_submision",
-    formID: "2345", //Form için bir ID değeri gönderilmelidir.
-    formCategory: "İletişim Formu", //Formun kategori değeri gönderilmelidir.
-    formStep: "2", //Formda bulunulan adımın değeri gönderilmelidir.
-
-});
-
-```
-
-<br>
-
-## 3.0.2 - form_step
-
-<p>Web sitesinde bulunan formlarda birden fazla adım bulunduğu durumlarda her bir adımda çalışmalıdır.</p>
-
-```
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-    event: "form_step",
-    formID: "2345", //Form için bir ID değeri gönderilmelidir.
-    formCategory: "İletişim Formu", //Formun kategori değeri gönderilmelidir.
-    formStep: "2", //Formda bulunulan adımın değeri gönderilmelidir.
-});
-
-```
-
-<br>
-
-## 3.0.3 - form_click
-
-<p>Web sitesinde bulunan formlarda her bir input değeri girildiğinde çalışmalıdır.</p>
-
-```
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-    event: "form_click",
-    formID: "2345", //Form için bir ID değeri gönderilmelidir.
-    formCategory: "İletişim Formu", //Formun kategori değeri gönderilmelidir.
-    formStep: 2, //Formda bulunulan adımın değeri gönderilmelidir.
-    formInput: "email" //Form içerisinde kullanıcının tıkladığı input alanı girilmelidir. 
-});
-
 ```
 
 <br>
