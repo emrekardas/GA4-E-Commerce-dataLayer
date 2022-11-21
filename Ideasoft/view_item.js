@@ -1,3 +1,4 @@
+//<script>
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
     'event': 'view_item',
@@ -10,3 +11,4 @@ window.dataLayer.push({
     }
     
 });
+//</script>

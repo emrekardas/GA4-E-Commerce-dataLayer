@@ -1,0 +1,24 @@
+//<script type="text/javascript">
+  {% if template contains 'cart' %}
+            var ecommerce = {
+                'currency': {{cart.currency.iso_code | json}},
+                'value': {{cart.total_price | divided_by: 100.0 | json}},
+                'items':[{% for line_item in cart.items %}{
+                    'item_id'        : '{{line_item.product.id | json}}',                  
+                    'item_variant'    : {{line_item.variant.title | json}},             
+                    'item_name'      : {{line_item.product.title | json}},
+                    'price'           : {{line_item.product.price | money_without_currency | replace: ',', '.' | json}},
+                    'item_brand'      : {{line_item.product.vendor | json}},
+                    'item_category'   : {{line_item.product.type | json}},
+                    'item_list_name'  : {{line_item.collection.title | json}},
+                    'quantity'        : {{line_item.quantity | json}},
+                    'discount'		  : {{discount.code | json}}
+                },{% endfor %}],
+            };
+            dataLayer.push({
+                'pageType' : 'Cart',
+                'event'    : 'view_cart',
+                ecommerce
+            });  
+{% endif %}
+//</script>
