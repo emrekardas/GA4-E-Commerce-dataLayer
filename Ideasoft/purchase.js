@@ -1,4 +1,4 @@
-
+//<script>
 var FBurunler = new Array();
 var Prices = new Array();
 var Ids = new Array();
@@ -38,3 +38,4 @@ window.dataLayer.push({
         'items': products
   }
 });
+//</script>

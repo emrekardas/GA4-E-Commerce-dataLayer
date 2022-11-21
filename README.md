@@ -1,5 +1,5 @@
 # Google Analytics 4 Örnek Data
-<p>Aşağıda verilen yapılar dataLayerın kurulumundan sonra bize yansıtılacak dataların örneğidir. Değişkenler örnekte verilen isimlerle kullanılmalıdır</p>
+<p>Aşağıda verilen yapılar dataLayerın kurulumundan sonra bize yansıtılacak dataların örneğidir. Değişkenler örnekte verilen isimlerle kullanılmalıdır.</p>
 
 ## Konu Başlıkları
 	1.0 | Gelişmiş E-Ticaret Takibi Entegrasyonu
