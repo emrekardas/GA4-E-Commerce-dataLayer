@@ -1,5 +1,6 @@
-// IdeaSoft Altyapısında add_to_cart custom HTML olarak GTM Tarafına Girilmelidir.
-//<script>
+ //cHTML olarak GTM tarafına eklenmelidir. Trigger view_item olmalıdır.
+ 
+ //<script>
 IdeaCart.prototype.AddToCartBasic = function (productId, htmlElement, priceWithoutTax, currency, tax, rebate, rebateType, moneyOrderAmount, stockTypeLabel, isAdditionalCartUpdateDisable, rootProduct, categoryId, brandId, extraButtonType, isLightBoxDisable) {
     if (parseFloat(priceWithoutTax) < 0.01) {
         alert("Ürün fiyatı hatalı olduğu için sepete atılamaz. Lütfen sistem yöneticisiyle irtibata geçiniz");

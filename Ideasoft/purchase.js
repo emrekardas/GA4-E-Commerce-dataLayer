@@ -27,13 +27,13 @@ for (var i = 0; i < FBurunler.length; i++) {
 
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
-  event: purchase,
+  event: 'purchase',
   ecommerce : {
-        transaction_id: {orderId},
+        transaction_id: '{orderId}',
         currency: TRY,
-        value: {total},
-        tax: {tax},
-        shipping: {cargo},
+        value: '{total}',
+        tax: '{tax}',
+        shipping: '{cargo}',
         google_business_vertical: "retail", // Google Ads parametresi, değişmez.
         items: products
   }

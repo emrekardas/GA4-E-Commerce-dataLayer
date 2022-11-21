@@ -27,11 +27,11 @@ for (var i = 0; i < FBurunler.length; i++) {
 
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
-    event: view_cart,
+    event: 'view_cart',
     ecommerce : {
-        transaction_id: {orderId},
+        transaction_id: '{orderId}',
         currency: TRY,
-        value: {total},
+        value: '{total}',
         google_business_vertical: "retail", // Google Ads parametresi, değişmez.
         items: products
     }   
