@@ -1,6 +1,6 @@
  //cHTML olarak GTM tarafına eklenmelidir. Trigger view_item olmalıdır.
  
- //<script>
+//<script>
   
   // Category için dizi
   
@@ -9,9 +9,6 @@
   for (var i = 1; i < document.querySelectorAll('[itemprop="itemListElement"]').length-1; i++) {
     dizi.push(document.querySelectorAll('[itemprop="itemListElement"]')[i].querySelector('[itemprop="name"]').innerText)
 }
-  
- 
-  
   
 window.cart.remarketing.add = function () {
     var n = window.cart.get.model.cart.products.filter(function (n) {
@@ -29,6 +26,8 @@ window.cart.remarketing.add = function () {
                 'price': productDetailModel.productPriceStr,
                 'quantity': window.cart.add.model.piece,
                 'item_category': n.category,
+                'google_business_vertical': "retail",
+                'id': productDetailModel.productId
             }]
         }
     });
