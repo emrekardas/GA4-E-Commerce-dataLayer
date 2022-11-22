@@ -20,7 +20,8 @@ for (var i = 0; i < FBurunler.length; i++) {
         item_name: Names[i],
         item_id: Ids[i],
         price: Prices[i],
-        quantity: Quantity[i]
+        quantity: Quantity[i],
+        id: Ids[i],
       });
 
 }
