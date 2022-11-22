@@ -16,7 +16,8 @@ for (var i = 0; i < Ids.length; i++) {
         item_name: Names[i],
         price: Prices[i],
         item_category : Category[i],
-        quantity: Quantity[i]
+        quantity: Quantity[i],
+        id : Ids[i],
       });
 }
 window.dataLayer = window.dataLayer || [];

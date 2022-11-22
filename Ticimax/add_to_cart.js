@@ -20,6 +20,8 @@
             'price': productDetailModel.productPriceStr,
             'quantity': window.cart.add.model.piece,
             'item_category': n.category,
+            'id': productDetailModel.productId,
+            'google_business_vertical': "retail"
         }]
     })
 }

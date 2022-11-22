@@ -28,6 +28,7 @@ window.dataLayer.push({
           quantity: 1,
           brand : brand,
           currency: "TRY",
+          id : "{ID}",
       }]}
 });
 //</script>

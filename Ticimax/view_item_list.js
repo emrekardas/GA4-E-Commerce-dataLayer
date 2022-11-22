@@ -7,6 +7,7 @@ var item_id = "{URUNIDLERI}".split(",") ;
         google_business_vertical: "retail", // Google Ads parametresi, değişmez.
         item_category : " {KATEGORIADI} ",
         item_id : item_id,
+        id : Ids[i],
     }
 });
 //</script>

@@ -283,6 +283,8 @@ __DL__jQueryinterval = setInterval(function(){
                     'item_brand'      : {{product.vendor | json}},
                     'item_category'   : {{product.type | json}},
                     'item_list_name'  : {{collection.title | json}},
+                    'id'        : {{product.id | json}},
+                    'google_business_vertical': "retail"
     }]
     };
         dataLayer.push({
@@ -314,7 +316,9 @@ __DL__jQueryinterval = setInterval(function(){
             'item_category'   : {{line_item.product.type | json}},
             'item_list_name'  : {{line_item.collection.title | json}},
             'quantity'        : {{line_item.quantity | json}},
-            'discount'		  : {{discount.code | json}}
+            'discount'		  : {{discount.code | json}},
+            'id'        : {{line_item.product.id | json}},
+            'google_business_vertical': "retail"
         },{% endfor %}],
     };
         dataLayer.push({
@@ -348,7 +352,9 @@ __DL__jQueryinterval = setInterval(function(){
                 'item_category'   : {{line_item.product.type | json}},
                 'item_list_name'  : {{line_item.collection.title | json}},
                 'quantity'        : {{line_item.quantity | json}},
-                'discount'		  : {{discount.code | json}}
+                'discount'		  : {{discount.code | json}},
+                'id'        : {{line_item.product.id | json}},
+                'google_business_vertical': "retail"
             },{% endfor %}],
         };
             if(Shopify.Checkout.step){
@@ -401,6 +407,8 @@ __DL__jQueryinterval = setInterval(function(){
                     'item_brand'      : {{product.vendor | json}},
                     'item_category'   : {{product.type | json}},
                     'item_list_name'  : {{product.collection.title | json}},
+                    'id'        : {{line_item.product.id | json}},
+                    'google_business_vertical': "retail"
                 },{% endfor %}],
             };
                 dataLayer.push({
@@ -424,17 +432,11 @@ __DL__jQueryinterval = setInterval(function(){
                 'item_category'   : {{line_item.product.type | json}},
                 'item_list_name'  : {{line_item.collection.title | json}},
                 'quantity'        : {{line_item.quantity | json}},
-                'discount'		  : {{discount.code | json}}
+                'discount'		  : {{discount.code | json}},
+                'id'        : {{line_item.product.id | json}},
+                'google_business_vertical': "retail"
             },{% endfor %}],
         };
-
-            $(__DL__.removeCartTrigger).click(function(){
-                dataLayer.push({
-                    'pageType'   : "Remove from cart",
-                    'event' : 'remove_from_cart',
-                    ecommerce
-                });
-            });
             {% endif %}
 
             /** Google Tag Manager **/

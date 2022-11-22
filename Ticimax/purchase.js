@@ -13,6 +13,7 @@ for (var i = 0; i < Ids.length; i++) {
         item_id: Ids[i],
         price: Prices[i],
         quantity : Quantity[i],
+        id : Ids[i],
       });
 }
 window.dataLayer = window.dataLayer || [];

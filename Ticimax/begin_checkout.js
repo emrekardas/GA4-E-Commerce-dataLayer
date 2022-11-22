@@ -11,10 +11,11 @@ var products = [];
 
 for (var i = 0; i < Ids.length; i++) {
     products.push({
-        'item_id': Ids[i],
-      	'item_name' : buSepet.Urunler[i].UrunAdi,
-        'price': Prices[i],
-        'quantity': Quantity[i],
+        item_id: Ids[i],
+      	item_name : buSepet.Urunler[i].UrunAdi,
+        price: Prices[i],
+        quantity: Quantity[i],
+        id : Ids[i],
       });
 }
 
