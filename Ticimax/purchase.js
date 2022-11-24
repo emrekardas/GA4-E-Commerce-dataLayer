@@ -3,6 +3,7 @@
 
 //<script>
 
+//Enhanced ECommerce
 var userEmail = "{EMAIL}";
 	var kargoBilgileri = {"kargoAliciAdi" : "", "kargoAliciSoyadi": "", "kargoAliciTelefon": "", "kargoEmail": "", "kargoAliciIlce":"", "kargoAliciMahalle": "", "kargoAliciSehir": "", "kargoAliciUlke": "", "kargoPostaKodu":""};
 	var enhanced_conversion_data = {"email": "", "phone_number": "", "address": {"first_name": "", "last_name": "", "street": "", "city": "", "region": "", "postal_code": "", "country": ""}};
