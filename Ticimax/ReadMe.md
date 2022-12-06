@@ -3,6 +3,7 @@
 GTM eklenirken:
 
 HEAD: Anasayfa > Modüller > Script Yönetimi > 10. Tüm Sayfalar - Header
+
 BODY: Anasayfa > Modüller > Script Yönetimi > 1. Tüm Sayfalar
 
 #
