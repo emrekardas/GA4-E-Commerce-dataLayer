@@ -1,4 +1,12 @@
+### Arama sonucunu görüntüleme - view_search_results Event
 
+```view_search_results``` arama sonucunu ölçer.
+
+Tamamı gönderilmesine gerek yok. İlk 7 ürün yeterlidir.
+
+Arama için: Anasayfa > Modüller > Script Yönetimi > Arama
+
+```javascript
 // Item Names
 
 function printItemNames() {
@@ -18,7 +26,7 @@ function printItemPrices() {
     var hrefs = document.querySelectorAll(".discountPrice")
     var result = []
     hrefs.forEach(function (e) {
-        result.push(e.innerText.slice(1).replaceAll('.', '').replace(',','.'))
+        result.push(parseFloat(e.innerText.replaceAll('.', '').replace(',', '.')))
     })
     return result
 }
@@ -64,10 +72,9 @@ function printItemCategories() {
 
 productCategoryList = printItemCategories()
 
-
 items = [];
 
-if (productNameList.length > 10){
+if (productNameList.length > 10) {
     var len = 10
 } else {
     var len = productNameList.length
@@ -75,8 +82,7 @@ if (productNameList.length > 10){
 
 var value = 0
 
-
-for (i=0; i < len; i++){
+for (i = 0; i < len; i++) {
     items.push({
         'item_id': productIdList[i],
         'item_name': productNameList[i],
@@ -84,15 +90,18 @@ for (i=0; i < len; i++){
         'price': Number(productPriceList[i]),
         'quantity': 1,
         'item_category': productCategoryList[i],
+
+        // Google Ads Remarketing Parametreleri ⤵️
+        'id': productIdList[i],
+        'google_business_vertical': 'retail'
     })
     var value = value + Number(productPriceList[i])
 }
 
-
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
-    'event': "view_item_list",
-    ecommerce: {
+    'event': "view_search_results",
+    'ecommerce': {
         'value': value,
         'currency': 'TRY',
         'items': items
@@ -101,7 +110,7 @@ window.dataLayer.push({
 
 var allItems = []
 
-for (i=0; i < productNameList.length; i++){
+for (i = 0; i < productNameList.length; i++) {
     allItems.push({
         'item_id': productIdList[i],
         'item_name': productNameList[i],
@@ -109,5 +118,10 @@ for (i=0; i < productNameList.length; i++){
         'price': Number(productPriceList[i]),
         'quantity': 1,
         'item_category': productCategoryList[i],
+
+        // Google Ads Remarketing Parametreleri ⤵️
+        'id': productIdList[i],
+        'google_business_vertical': 'retail'
     })
 }
+```
