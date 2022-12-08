@@ -18,7 +18,7 @@ dataLayer.push({
         price: {{ line_item.final_price | times: 0.01 }},
         quantity: {{ line_item.quantity }}
       },{% endfor %}
- ]
+    ]
   }
 });
 {% endif %}
