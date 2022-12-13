@@ -12,9 +12,11 @@ dataLayer.push({
       currency: "{{ order.currency }}",
       items: [
        {% for line_item in line_items %}{
-        item_id: "{{ line_item.product_id }}",
-        item_name: "{{ line_item.title | remove: "'" | remove: '"' }}",
-        currency: "{{ order.currency }}",
+        item_id : "{{ line_item.product_id }}",
+        item_name : "{{ line_item.title | remove: "'" | remove: '"' }}",
+        currency : "{{ order.currency }}",
+        discount : {{ line_item.line_level_total_discount | money_without_currency }},
+        item_variant: {{ line_item.variant.title }},
         price: {{ line_item.final_price | times: 0.01 }},
         quantity: {{ line_item.quantity }},
         id: "{{line_item.product.id | json}}",
