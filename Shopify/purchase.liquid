@@ -17,8 +17,8 @@ dataLayer.push({
         currency: "{{ order.currency }}",
         price: {{ line_item.final_price | times: 0.01 }},
         quantity: {{ line_item.quantity }},
-id: "{{line_item.product.id | json}}",
-                google_business_vertical: "retail"
+        id: "{{line_item.product.id | json}}",
+        google_business_vertical: "retail"
       },{% endfor %}
  ]
   }
