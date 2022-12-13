@@ -260,6 +260,8 @@ __DL__jQueryinterval = setInterval(function(){
                 'item_brand'      : {{product.vendor | json}},
                 'item_category'   : {{product.type | json}},
                 'item_list_name'  : {{collection.title | json}},
+                'currency'      : {{shop.currency | json}},
+                'quantity'        : {{line_item.quantity | json}}
             },
         {% endfor %}]
     };
@@ -283,6 +285,8 @@ __DL__jQueryinterval = setInterval(function(){
                     'item_brand'      : {{product.vendor | json}},
                     'item_category'   : {{product.type | json}},
                     'item_list_name'  : {{collection.title | json}},
+                    'quantity'        : {{line_item.quantity | json}},
+                    'currency'      : {{shop.currency | json}}
                     'id'        : {{product.id | json}},
                     'google_business_vertical': "retail"
     }]
