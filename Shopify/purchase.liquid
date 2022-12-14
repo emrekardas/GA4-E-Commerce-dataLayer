@@ -3,26 +3,27 @@ window.dataLayer = window.dataLayer || [];
 dataLayer.push({ ecommerce: null });
 {% if first_time_accessed %}
 dataLayer.push({
-  'event': "purchase",
-      'ecommerce': {
-          'transaction_id': '{{order.order_number }}',
-          'value': {{ total_price | money_without_currency | remove:',' }},
-          'tax': {{ tax_price | money_without_currency | remove:',' }},
-          'shipping': {{ shipping_price | money_without_currency | remove:',' }},
-          'currency': '{{ shop.currency }}',
-          'items': [
-              {% for line_item in line_items %}
-              {
-                  'item_id': '{{ line_item.sku || line_item.product_id }}',
-                  'item_name': '{{ line_item.product.title }}',
-                  'discount': {{ line_item.line_level_total_discount | money_without_currency }},
-                  'item_variant': '{{ line_item.variant.title }}',
-                  'price': {{ line_item.final_price | money_without_currency | remove:',' }},
-                  'quantity': {{ line_item.quantity }}
-              }
-          {%endfor%}
-          ]
-      }
-  });
+  event: "purchase",
+  ecommerce: {
+      transaction_id: "{{ order.order_number }}",
+      value: {{ total_price | times: 0.01 }},
+      tax: {{ tax_price | times: 0.01 }},
+      shipping: {{ shipping_price | times: 0.01 }},
+      currency: "{{ order.currency }}",
+      items: [
+       {% for line_item in line_items %}{
+        item_id : "{{ line_item.product_id }}",
+        item_name : "{{ line_item.title | remove: "'" | remove: '"' }}",
+        currency : "{{ order.currency }}",
+        discount : {{ line_item.line_level_total_discount | money_without_currency }},
+        item_variant: {{ line_item.variant.title }},
+        price: {{ line_item.final_price | times: 0.01 }},
+        quantity: {{ line_item.quantity }},
+        id: "{{line_item.product.id | json}}",
+        google_business_vertical: "retail"
+      },{% endfor %}
+ ]
+  }
+});
 {% endif %}
 //</script>
